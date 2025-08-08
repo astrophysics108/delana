@@ -38,7 +38,7 @@ const { img_main = "" } = Astro.props
     }
 
     .container :global(h1) {
-      font-family: "Offside", sans-serif;
+      font-family: "Cascadia Mono", sans-serif;
       font-style: normal;
       color:white;
       font-size: 5em;
@@ -81,9 +81,9 @@ const { img_main = "" } = Astro.props
       text-align: left;
     }
     .container :global(.img_main){
-      width:100%;
+      width:90%;
       height:auto;
-      margin-right: 2em;
+      padding: 2em;
       transition: 0.5s;
       filter: drop-shadow(8px 8px 36px rgba(0, 0, 0, 0.4)) inset;
       border-radius: 50%;
@@ -135,6 +135,30 @@ const { img_main = "" } = Astro.props
       text-decoration: none;
     } */
   </style>
+
+  <script>
+    var i = 0;
+    var headertext = document.getElementById("headertext");
+    if (headertext == null) {
+    }
+    else{
+      var txt = headertext.innerHTML;
+      var time = 70; 
+      headertext.innerHTML = "";
+      const extratext1 = "TensorCalculus";
+      const extratext2 = "Astrophysics108";
+
+      function typeWriter() {
+        if (i < txt.length) {
+          headertext.innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, time);
+        }
+       }
+      document.addEventListener('DOMContentLoaded', function () {typeWriter()})
+    }
+    
+</script>
   
   <div class="container" style={`background-image: url('${img_path}')`}>
     <img src={img_main} class="img_main">
