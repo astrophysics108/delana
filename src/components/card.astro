@@ -1,6 +1,6 @@
 ---
-const { img_path = "" } = Astro.props;
-const { img_main = "" } = Astro.props
+// const { img_path = "" } = Astro.props;
+// const { img_main = "" } = Astro.props
 ---
 
 
@@ -9,10 +9,12 @@ const { img_main = "" } = Astro.props
       display: grid;
       min-height: inherit;
       margin: 2em;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
+      /*border: 3px solid #a49898;*/
       border-radius: 20px;
       overflow: hidden;
       padding: 2em ;
+      /* background-image:url({img_path}); */
     text-align: center;
     text-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7) !important;
   background: rgba(255,255,255,0.1);
@@ -39,7 +41,7 @@ const { img_main = "" } = Astro.props
       font-family: "Cascadia Mono", sans-serif;
       font-style: normal;
       color:white;
-      font-size: 5em;
+      font-size: 3em;
       text-align: left;
       
       
@@ -114,58 +116,9 @@ const { img_main = "" } = Astro.props
 
   </style>
 
-  <script>
-    var i = 0;
-    var headertext = document.getElementById("headertext");
-    function sleep(ms) {
-              return new Promise(resolve => setTimeout(resolve, ms));
-          }
-    if (headertext == null) {
-    }
-    else{
-      var txt = headertext.innerHTML;
-      const time = 70; 
-      const timechop = 40;
-      const extratext = ["Astrophysics108", "TensorCalculus", "Delana"];
-      var newname = "";
-
-      async function typeWriter() {
-        headertext.innerHTML = "";
-        do {
-          headertext.innerHTML += txt.charAt(i);
-          i++;
-          await sleep(time);
-        } while (i < txt.length) ;
-
-        do {
-          for (let ind = 0; ind < extratext.length; ind++) {
-          await sleep(300);
-          newname = extratext[ind]
-          do {
-              headertext.innerHTML = headertext.innerHTML.slice(0, -1)
-              await sleep(timechop);
-          } while (headertext.innerHTML.length > 17)
-
-          i = 0
-          do {
-            headertext.innerHTML += newname.charAt(i);
-            i++;
-            await sleep(time);
-          } while (i < newname.length + 17) ;
-
-          }
-        } while (true == true)
-       
-       
-        
-       }
-      document.addEventListener('DOMContentLoaded', function () {typeWriter()})
-    }
-    
-</script>
   
-  <div class="container" style={`background-image: url('${img_path}')`}>
-    <img src={img_main} class="img_main">
+  <div class="container">
+    <!-- <img src={img_main} class="img_main"> -->
     <slot />
   </div>
   
