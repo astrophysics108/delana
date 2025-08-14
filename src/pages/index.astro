@@ -1,10 +1,15 @@
 ---
-import pfp from "../../public/images/pfp.jpg";
 import HeaderCard from "../components/headercard.astro"
 import Star from "../components/star.astro";
 import Card from "../components/card.astro";
 import CardWrapper from "../components/cardwrapper.astro";
 
+// images
+import pfp from "../../public/images/pfp.jpg";
+import Mathsimg from "../../public/images/mathsimg.png";
+import Physimg from "../../public/images/physicsimg.png";
+import Chemimg from "../../public/images/chemistryimg.png";
+import Codeimg from "../../public/images/codeimg.png";
 ---
 
 <html>
@@ -20,7 +25,8 @@ import CardWrapper from "../components/cardwrapper.astro";
                 <h1 id="headertext">Hey there👋, I'm Delana</h1>
                 <p>I'm a 14 year old... well... nerd... with a 
                     passion for physics, coding, maths, chemistry, 
-                    art, and having fun!</p>
+                    art, and having fun! Welcome to my website, where you'll find 
+                    out all about me and my little quirks :)</p>
             </div>
             
         </HeaderCard>
@@ -35,16 +41,56 @@ import CardWrapper from "../components/cardwrapper.astro";
             </div>
             <div class = "card-wrapper">
                 <Card>
-                    <h1>Physics</h1>
+                    <div class = "text-wrapper">
+                        <h1>Physics</h1>
+                        <p>I LOVE physics. Solving a tricky physics problem is one of my favourite activities:
+                            there is nothing like the feeling of getting the answer after so much work
+                        </p>
+                    </div>
+                    <img src={Physimg.src}>
                 </Card>
                 <Card>
-                    <h1>Maths</h1>
+                    <div class = "text-wrapper">
+                        <h1>Maths</h1>
+                        <p>You can't enjoy physics without enjoying Maths: and of course as the physics enthusiast I am, I no doubt love the beautiful discipline that is mathematics.</p>
+                    </div>
+                    <img src={Mathsimg.src}>
                 </Card>
                 <Card>
-                    <h1>Coding</h1>
+                    <div class = "text-wrapper">
+                        <h1>Coding</h1>
+                        <p>If coding this website (not vibe coded, I promise) 
+                        isn't enough to convince you that I'm a massive coding nerd, then I'm sure my <a href="https://github.com/astrophysics108"> GitHub</a>
+                        will! Whether it's HTML/CSS, Javascript, Python, Rust, or even Godot script, I've got you covered!
+                        </p>
+                    </div>
+                    <img src={Codeimg.src}>
                 </Card>
                 <Card>
-                    <h1>Art</h1>
+                    <div class = "text-wrapper">
+                        <h1>Art</h1>
+                        <p> As weird as it may seem for someone who at first glance
+                            is very science-oriented, it's true: I am a big artist.
+                        </p>
+                    </div>
+                </Card>
+                <Card>
+                    <div class = "text-wrapper">
+                        <h1>Chemistry</h1>
+                        <p>It may come as no surprise that my love for physics has also manifested in the form 
+                            of a passion for Chemistry.
+                        </p>
+                    </div>
+                    <img src={Chemimg.src}>
+                </Card>
+                <Card>
+                    <h1>Gaming</h1>
+                </Card>
+                <Card>
+                    <h1>Reading</h1>
+                </Card>
+                <Card>
+                    <h1>..and more!</h1>
                 </Card>
             </div>
         </CardWrapper>
