@@ -1,6 +1,7 @@
 ---
 const { img_path = "" } = Astro.props;
-const { img_main = "" } = Astro.props
+const { img_main = "" } = Astro.props;
+var { change = "" } = Astro.props
 ---
 
 
@@ -121,6 +122,7 @@ const { img_main = "" } = Astro.props
               return new Promise(resolve => setTimeout(resolve, ms));
           }
     if (headertext == null) {
+      
     }
     else{
       var txt = headertext.innerHTML;
@@ -130,6 +132,7 @@ const { img_main = "" } = Astro.props
       var newname = "";
 
       async function typeWriter() {
+        
         headertext.innerHTML = "";
         do {
           headertext.innerHTML += txt.charAt(i);
@@ -161,6 +164,7 @@ const { img_main = "" } = Astro.props
        }
       document.addEventListener('DOMContentLoaded', function () {typeWriter()})
     }
+   
     
 </script>
   

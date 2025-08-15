@@ -1,0 +1,48 @@
+---
+import HeaderCard from "../components/headercard.astro";
+import ImgCard from "../components/imgcard.astro";
+import Cardwrapper from "../components/cardwrapper.astro";
+
+// images
+import Heartimg from "../../public/images/artimg.jpg";
+---
+
+<html>
+<meta charset="UTF-8">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <HeaderCard>
+            <div class="text-wrapper">
+                <h1>Check out my art!</h1>
+                <p>It might come as a surprise
+                    that I love to draw :) 
+                </p>
+            </div>
+        </HeaderCard>
+        <Cardwrapper>
+            <h1>My School Art</h1>
+            <div class = "pwrapper" >
+            <p>I took art for a couple of years in school,
+                 here's what I managed to make when following the curriculum...</p>
+            </div>
+            <div class="card-wrapper">
+                <ImgCard img_path={Heartimg.src}></ImgCard>
+                <ImgCard img_path={Heartimg.src}></ImgCard>
+                <ImgCard img_path={Heartimg.src}></ImgCard>
+                <ImgCard img_path={Heartimg.src}></ImgCard>
+            </div>
+            
+        </Cardwrapper>
+    </body>
+</html>
+
+
+<style>
+    body{
+        background-color:rgb(27, 8, 68);
+    }
+</style>

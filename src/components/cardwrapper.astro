@@ -34,6 +34,15 @@
     
         }
 
+        @media only screen and (max-width: 1000px) {
+            .container :global(.card-wrapper){
+            grid-template-columns: 1fr;
+            margin-bottom:2em;
+            padding:0.5em;
+            text-shadow: 8px 8px 20px rgba(255, 0, 0, 0.7) !important;
+            }
+        }
+
         .container :global(h1) {
             font-family: "Cascadia Mono", sans-serif;
             font-style: normal;
