@@ -3,7 +3,9 @@ import HeaderCard from "../components/headercard.astro";
 import ImgCard from "../components/imgcard.astro";
 import Cardwrapper from "../components/cardwrapper.astro";
 
-// images
+// Images
+
+// School
 import Heartimg from "../../public/images/artimg.jpg";
 import CartoonImg from "../../public/images/school_art/cartoon.jpg";
 import ArtCoverImg from "../../public/images/school_art/cover.jpg";
@@ -14,6 +16,23 @@ import FigureImg2 from "../../public/images/school_art/figure2.jpg";
 import HandImg from "../../public/images/school_art/eyes.jpg";
 import KeithImg from "../../public/images/school_art/keith.jpg";
 import LaptopImg from "../../public/images/school_art/laptop.jpg";
+
+// Home
+import AstronautImg from "../../public/images/home_art/astronaut.jpg";
+import BlueImg from "../../public/images/home_art/blueeye.jpg";
+import GuptaImg from "../../public/images/home_art/gupta.jpg";
+import LipsImg from "../../public/images/home_art/lips.jpg";
+import MarioImg from "../../public/images/home_art/mario.jpg";
+import SkullPandaImg from "../../public/images/home_art/skullpanda.jpg";
+import StarryEyeImg from "../../public/images/home_art/astronaut.jpg";
+
+// Digital
+import DaydreamImg from "../../public/images/digital_art/daydream.png";
+import ScrapyardImg1 from "../../public/images/digital_art/scrapyard1.png";
+import ScrapyardImg2 from "../../public/images/digital_art/scrapyard2.png";
+import ScrapyardImg3 from "../../public/images/digital_art/scrapyard3.png";
+import ScrapyardImg4 from "../../public/images/digital_art/scrapyard4.png";
+import TCImg from "../../public/images/digital_art/tensorcalculus.jpg";
 ---
 
 <html>
@@ -33,11 +52,11 @@ import LaptopImg from "../../public/images/school_art/laptop.jpg";
             </div>
         </HeaderCard>
         <Cardwrapper>
-            <h1>My School Art</h1>
+            <h1>My School Art</h1>   
             <div class = "pwrapper" >
             <p>I took art for a couple of years in school,
                  here's what I managed to make  during lessons and as homework... or as
-                some extra school-related projects (such as decorating my very plain-looking laptop case)</p>
+                some extra school-related projects (such as decorating my very originally very plain-looking laptop case)</p>
             </div>
             <div class="card-wrapper">
                 <ImgCard img_path={Heartimg.src}></ImgCard>
@@ -50,6 +69,47 @@ import LaptopImg from "../../public/images/school_art/laptop.jpg";
                 <ImgCard img_path={HandImg.src}></ImgCard>
                 <ImgCard img_path={LaptopImg.src}></ImgCard>
                 <ImgCard img_path={KeithImg.src}></ImgCard>
+            </div>
+            
+        </Cardwrapper>
+        <Cardwrapper>
+            <h1>My Home Art</h1>
+            <div class = "pwrapper" >
+            <p>Here's some art I've made at home, 
+                just for fun! Some of it is from a long while ago...
+            </p>
+            </div>
+            <div class="card-wrapper">
+            
+                <ImgCard img_path={AstronautImg.src}></ImgCard>
+                <ImgCard img_path={BlueImg.src}></ImgCard>
+                <ImgCard img_path={GuptaImg.src}></ImgCard>
+                <ImgCard img_path={LipsImg.src}></ImgCard>
+                <ImgCard img_path={MarioImg.src}></ImgCard>
+                <ImgCard img_path={FigureImg2.src}></ImgCard>
+                <ImgCard img_path={SkullPandaImg.src}></ImgCard>
+                <ImgCard img_path={StarryEyeImg.src}></ImgCard>
+
+            </div>
+            
+        </Cardwrapper>
+        <Cardwrapper>
+            <h1>My Digital art</h1>
+            <div class = "pwrapper" >
+            <p>I like drawing things digitally too! 
+                For my hackathons, I love designing stickers :)
+            </p>
+            </div>
+            <div class="card-wrapper">
+            
+                <ImgCard img_path={DaydreamImg.src}></ImgCard>
+                <ImgCard img_path={ScrapyardImg1.src}></ImgCard>
+                <ImgCard img_path={ScrapyardImg2.src}></ImgCard>
+                <ImgCard img_path={ScrapyardImg3.src}></ImgCard>
+                <ImgCard img_path={ScrapyardImg4.src}></ImgCard>
+                <ImgCard img_path={TCImg.src}></ImgCard>
+                <ImgCard img_path={SkullPandaImg.src}></ImgCard>
+                <ImgCard img_path={StarryEyeImg.src}></ImgCard>
 
             </div>
             
