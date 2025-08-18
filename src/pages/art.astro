@@ -5,6 +5,15 @@ import Cardwrapper from "../components/cardwrapper.astro";
 
 // images
 import Heartimg from "../../public/images/artimg.jpg";
+import CartoonImg from "../../public/images/school_art/cartoon.jpg";
+import ArtCoverImg from "../../public/images/school_art/cover.jpg";
+import DaVinciImg from "../../public/images/school_art/davinci.jpg";
+import EyesImg from "../../public/images/school_art/eyes.jpg";
+import FigureImg from "../../public/images/school_art/figure.jpg";
+import FigureImg2 from "../../public/images/school_art/figure2.jpg";
+import HandImg from "../../public/images/school_art/eyes.jpg";
+import KeithImg from "../../public/images/school_art/keith.jpg";
+import LaptopImg from "../../public/images/school_art/laptop.jpg";
 ---
 
 <html>
@@ -27,13 +36,21 @@ import Heartimg from "../../public/images/artimg.jpg";
             <h1>My School Art</h1>
             <div class = "pwrapper" >
             <p>I took art for a couple of years in school,
-                 here's what I managed to make when following the curriculum...</p>
+                 here's what I managed to make  during lessons and as homework... or as
+                some extra school-related projects (such as decorating my very plain-looking laptop case)</p>
             </div>
             <div class="card-wrapper">
                 <ImgCard img_path={Heartimg.src}></ImgCard>
-                <ImgCard img_path={Heartimg.src}></ImgCard>
-                <ImgCard img_path={Heartimg.src}></ImgCard>
-                <ImgCard img_path={Heartimg.src}></ImgCard>
+                <ImgCard img_path={CartoonImg.src}></ImgCard>
+                <ImgCard img_path={ArtCoverImg.src}></ImgCard>
+                <ImgCard img_path={DaVinciImg.src}></ImgCard>
+                <ImgCard img_path={EyesImg.src}></ImgCard>
+                <ImgCard img_path={FigureImg.src}></ImgCard>
+                <ImgCard img_path={FigureImg2.src}></ImgCard>
+                <ImgCard img_path={HandImg.src}></ImgCard>
+                <ImgCard img_path={LaptopImg.src}></ImgCard>
+                <ImgCard img_path={KeithImg.src}></ImgCard>
+
             </div>
             
         </Cardwrapper>
