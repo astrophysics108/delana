@@ -1,0 +1,22 @@
+---
+import Layout from "../layout/main_layout.astro";
+---
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <Layout>
+        <div id="maintext"></div>
+    </Layout>
+
+</html>
+
+<script>
+    fetch("coolplaces.txt").then(r => r.text())
+    .then(text => {
+        document.getElementById("maintext").innerHTML = `<p>${text}<p/>`;
+    });
+</script>

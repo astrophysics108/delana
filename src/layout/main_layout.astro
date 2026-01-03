@@ -1,0 +1,29 @@
+---
+---
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <slot />
+        </div>
+    </body>
+</html>
+
+<style>
+    body {
+        background-color: #090117;
+    }
+
+    .container {
+        text-align: left;
+    }
+
+    .container :global(p) {
+        font-family: "JetBrains Mono", monospace;
+        color:#fdedff;
+    }
+</style>
