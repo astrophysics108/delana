@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import Sidebar from "../components_new/sidebar.astro";
 ---
 <html>
     <head>
@@ -8,6 +9,7 @@ const { title } = Astro.props;
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
         
     </head>
+    <Sidebar></Sidebar>
     <body>
         <h1 id="pagetitle" data-text={title}></h1>
         <div class="container">
@@ -19,6 +21,7 @@ const { title } = Astro.props;
 <style>
     body {
         background-color: #090117;
+        margin-left: 35%;
     }
 
     .container {
@@ -46,4 +49,16 @@ const { title } = Astro.props;
     i++;
     if (i >= text.length) clearInterval(interval);
   }, 100);
+  const interval2 = setInterval(() => {
+    if (i % 18 == 0) {
+        el.style.color = "#8055e6";
+    }
+    else if (i % 6 == 0) {
+        el.style.color = "#090117";
+    }
+    else {
+        el.style.color = "#fdedff";
+    }
+    i++;
+  }, 1000);
 </script>
