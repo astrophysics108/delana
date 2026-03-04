@@ -11,7 +11,7 @@ import Sidebar from "../components_new/sidebar.astro";
     </head>
     <Sidebar></Sidebar>
     <body>
-        <h1 id="pagetitle" data-text={title}></h1>
+        <h1 id="pagetitle" class="page-title" data-text={title}></h1>
         <div class="container">
             <slot />
         </div>
@@ -22,6 +22,11 @@ import Sidebar from "../components_new/sidebar.astro";
     body {
         background-color: #090117;
         margin-left: 35%;
+    }
+
+    .page-title:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease;
     }
 
     .container {
@@ -45,6 +50,16 @@ import Sidebar from "../components_new/sidebar.astro";
     h1 {
         font-family: "JetBrains Mono", monospace;
         color:#fdedff;
+    }
+
+    .container :global(a) {
+        font-family: "JetBrains Mono", monospace;
+        color:#ecc865;
+    }
+
+    .container :global(a:hover) {
+        font-family: "JetBrains Mono", monospace;
+        color:#fceabb;
     }
 </style>
 

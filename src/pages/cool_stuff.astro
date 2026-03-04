@@ -17,6 +17,9 @@ import Layout from "../layout/main_layout.astro";
 <script>
     fetch(String.raw`src\text_files\coolplaces.txt`).then(r => r.text())
     .then(text => {
-        document.getElementById("maintext").innerHTML = `<p>${text}<p/>`;
+        const p = document.createElement("p");
+        p.innerHTML = text;
+        p.style.whiteSpace = "pre-wrap";
+        document.getElementById("maintext").appendChild(p);
     });
 </script>
