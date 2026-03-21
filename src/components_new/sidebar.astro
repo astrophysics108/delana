@@ -49,7 +49,7 @@
 </style>
 
 <script>
-    fetch('src/text_files/pages.txt')
+    fetch('/delana/text_files/pages.txt')
         .then(r => r.text())
         .then(text => {
             const pages = text.trim().split('\n').map(p => p.trim()).filter(p => p);
