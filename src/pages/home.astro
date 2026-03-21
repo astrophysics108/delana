@@ -1,0 +1,25 @@
+---
+import Layout from "../layout/main_layout.astro";
+---
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <Layout title="Home">
+        <div id="maintext"></div>
+    </Layout>
+
+</html>
+
+<script>
+    fetch(String.raw`src\text_files\home.txt`).then(r => r.text())
+    .then(text => {
+        const p = document.createElement("p");
+        p.innerHTML = text;
+        p.style.whiteSpace = "pre-wrap";
+        document.getElementById("maintext").appendChild(p);
+    });
+</script>
