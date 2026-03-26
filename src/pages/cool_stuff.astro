@@ -1,5 +1,8 @@
 ---
 import Layout from "../layout/main_layout.astro";
+import inpText from "../text_files/coolplaces.txt?raw";
+
+const inpLines = inpText.split(/\r?\n/);
 ---
 
 <html>
@@ -14,12 +17,13 @@ import Layout from "../layout/main_layout.astro";
 
 </html>
 
-<script>
-    fetch('/delana/text_files/coolplaces.txt').then(r => r.text())
-    .then(text => {
+<script define:vars={{ inpLines }}>
+    const mainText = document.getElementById("maintext");
+
+    inpLines.forEach((line) => {
         const p = document.createElement("p");
-        p.innerHTML = text;
-        p.style.whiteSpace = "pre-wrap";
-        document.getElementById("maintext").appendChild(p);
+        p.innerHTML = line === "" ? "&nbsp;" : line;
+        p.style.margin = "0";
+        mainText.appendChild(p);
     });
 </script>
