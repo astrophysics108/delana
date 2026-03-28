@@ -24,11 +24,6 @@ import Sidebar from "../components_new/sidebar.astro";
         margin-left: 20em;
     }
 
-    .page-title:hover {
-        transform: scale(1.1);
-        transition: 0.3s ease;
-    }
-
     .container {
         text-align: left;
         padding: 2em;
@@ -37,6 +32,11 @@ import Sidebar from "../components_new/sidebar.astro";
     .container :global(p) {
         font-family: "JetBrains Mono", monospace;
         color:#fdedff;
+    }
+
+    .container :global(p:hover) {
+        font-family: "JetBrains Mono", monospace;
+        color:#df9de8;
     }
 
     .container :global(a) {

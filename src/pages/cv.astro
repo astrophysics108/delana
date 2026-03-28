@@ -1,0 +1,29 @@
+---
+import Layout from "../layout/main_layout.astro";
+import inpText from "../text_files/cv.txt?raw";
+
+const inpLines = inpText.split(/\r?\n/);
+---
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <Layout title="My CV">
+        <div id="maintext"></div>
+    </Layout>
+
+</html>
+
+<script define:vars={{ inpLines }}>
+    const mainText = document.getElementById("maintext");
+
+    inpLines.forEach((line) => {
+        const p = document.createElement("p");
+        p.innerHTML = line === "" ? "&nbsp;" : line;
+        p.style.margin = "0";
+        mainText.appendChild(p);
+    });
+</script>
