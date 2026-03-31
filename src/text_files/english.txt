@@ -12,3 +12,6 @@ Stuff from Lunn:
 <a href="/delana/assets/notes/AIC_shared.docx">An Inspector Calls Text</a>
 <a href="/delana/assets/notes/JaH_shared.docx">Jekyll and Hyde Text</a>
 
+Essay plans:
+<a href="https://chrome-seashore-547.notion.site/ebd//33485cfa3dd680ae90fddffe4baed63b">AIC Responsibility plan</a> (pretty much entirely taken from the earlier AIC notes)
+
